@@ -1,25 +1,25 @@
 {
   "schemaVersion": 1,
   "channel": "stable",
-  "version": "2.2.0",
-  "releaseDate": "2026-07-25T19:49:01.5036323Z",
+  "version": "2.2.1",
+  "releaseDate": "2026-07-25T20:02:42.9453546+00:00",
   "releaseNotes": [
-    "ปรับ AI Providers ให้ไม่ค้างเมื่อเชื่อมต่อหรือทดสอบ Provider ไม่สำเร็จ",
-    "เพิ่ม timeout และข้อความ error ที่ชัดเจนสำหรับ network/endpoint timeout, quota และ rate limit",
-    "เพิ่ม notification/toast มุมขวาบนเมื่อ AI Provider เชื่อมต่อ ทดสอบ หรือบันทึกไม่สำเร็จ",
-    "ย้าย toast ให้อิงหน้าต่างจริงและไม่ทับ modal ตรงกลางหน้าจอ",
-    "อัปเดต checksum และขนาดไฟล์จาก installer ที่ build ใหม่สำหรับเวอร์ชัน 2.2.0"
+    "ป้องกัน NSIS integrity error โดยตรวจ checksum จากไฟล์ installer บนดิสก์ซ้ำก่อนเปิดติดตั้ง",
+    "ลบไฟล์ installer ที่ค้างหรือเสียใน temp ก่อนเริ่มดาวน์โหลดรอบใหม่",
+    "เพิ่มรายละเอียด error เมื่อไฟล์ที่ดาวน์โหลดขนาดหรือ hash ไม่ตรงกับ Manifest",
+    "เปลี่ยนชื่อไฟล์ release เป็น GitToto-Desktop-Setup-2.2.1.exe เพื่อหลบไฟล์ temp/cache ของ 2.2.0 ที่เสีย",
+    "อัปเดต checksum และขนาดไฟล์จาก installer ที่ build ใหม่สำหรับเวอร์ชัน 2.2.1"
   ],
   "mandatory": false,
   "minimumSupportedVersion": "1.0.0",
   "platforms": {
     "win32-x64": {
       "fileId": "1Y_U-21j3MHRNL2UANiiBCJ2O4h3LCDJU",
-      "fileName": "GitToto-Desktop-Setup-2.2.0.exe",
-      "size": 90526757,
-      "sha256": "d79d12dce189ab3de1f686a7c489efb63f83006fbccbae0ed67d9ed7991e3fc8",
-      "sha512": "a94b2b2767aaa33eaeed14d1e26623a20e5ea5ea7aa7588108d57e420b5b3646ec57e981857abb7419daf8f9208260b22acc61120207034a21e5889ba0115af0",
-      "downloadUrl": "https://raw.githubusercontent.com/sittichainacc/git_toto_desktop/main/GitToto-Desktop-Setup-2.2.0.exe"
+      "fileName": "GitToto-Desktop-Setup-2.2.1.exe",
+      "size": 90526753,
+      "sha256": "cc96f522f9ae66ed05915bc0bb60c5f971211ba5f744d259a2845feafaa530c8",
+      "sha512": "0b2453bf28118732750c444c1cba8eadaf24ee343c75453972476ec88f43665d38be452b275f116e69ee4ce6995fbb3f6e1f2566028e287386eccd233bbe6a68",
+      "downloadUrl": "https://raw.githubusercontent.com/sittichainacc/git_toto_desktop/main/GitToto-Desktop-Setup-2.2.1.exe"
     }
   }
 }
