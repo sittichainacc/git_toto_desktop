@@ -1,24 +1,24 @@
 {
   "schemaVersion": 1,
   "channel": "stable",
-  "version": "2.1.5",
-  "releaseDate": "2026-07-25T18:53:59.1167634Z",
+  "version": "2.1.6",
+  "releaseDate": "2026-07-25T19:08:33.0882983Z",
   "releaseNotes": [
-    "เปลี่ยน Software Update ให้ใช้ GitHub raw เป็นแหล่ง manifest และ installer หลัก แทน Google Drive เพื่อลดปัญหา download throttle",
+    "ออกแพ็กเกจ Software Update เวอร์ชัน 2.1.6 สำหรับช่องทาง GitHub raw",
+    "ยืนยัน manifest และ installer ผ่าน GitHub raw เป็นช่องทางหลัก เพื่อลดปัญหาดาวน์โหลดช้าจาก Google Drive",
     "คง Google Drive fileId เป็น fallback หาก GitHub raw ใช้งานไม่ได้ชั่วคราว",
-    "ปรับ Commit Graph ให้จัดสัดส่วนคอลัมน์ด้วย CSS จาก container width จริง และไม่คำนวณ graph ใหม่ระหว่างลาก panel",
-    "ปรับการลาก resize panel/columns ให้เปลี่ยน CSS variable ระหว่างลาก บันทึก state หลังลากเสร็จ และตัด animation/effect ใน graph resize"
+    "อัปเดต checksum และขนาดไฟล์จาก installer ที่ build ใหม่สำหรับเวอร์ชันนี้"
   ],
   "mandatory": false,
   "minimumSupportedVersion": "1.0.0",
   "platforms": {
     "win32-x64": {
       "fileId": "1Y_U-21j3MHRNL2UANiiBCJ2O4h3LCDJU",
-      "fileName": "GitToto-Desktop-Setup-2.1.5.exe",
-      "size": 90529133,
-      "sha256": "fb8115448e5a8ceaaf7d4fd759317bca7b015dfdb5befe0eeeafc54d337d0794",
-      "sha512": "5e7cd5a38ae37bdc0a3017365061f50aade434e1e16e4ddc6fd4d96794a0c54ccc7ff1db3b2a82c21e3f359c09b26068a036c2d33d76e38f75c27644cdc830e6",
-      "downloadUrl": "https://raw.githubusercontent.com/sittichainacc/git_toto_desktop/main/GitToto-Desktop-Setup-2.1.5.exe"
+      "fileName": "GitToto-Desktop-Setup-2.1.6.exe",
+      "size": 90529416,
+      "sha256": "682f461efb0198cdbbf047f2088719d1b38ad29a32f2fa11c7c4036d192f4290",
+      "sha512": "89ad0b60ce2e5d7823408f771f1864d931167392d2ff6c178ce3b2a08426b43b2f49942f6a9a75f709abfe234d15dc3e3e3660644a5a3a77f62b12bf462ca2df",
+      "downloadUrl": "https://raw.githubusercontent.com/sittichainacc/git_toto_desktop/main/GitToto-Desktop-Setup-2.1.6.exe"
     }
   }
 }
