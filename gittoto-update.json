@@ -1,25 +1,23 @@
 {
   "schemaVersion": 1,
   "channel": "stable",
-  "version": "2.2.2",
-  "releaseDate": "2026-07-26T01:06:38.4902818+00:00",
+  "version": "2.2.3",
+  "releaseDate": "2026-07-26T01:43:02.075Z",
   "releaseNotes": [
-    "แก้ปัญหาหน้า Installing ค้างหลังดาวน์โหลดเสร็จ โดยเปิด installer ก่อนออกจากแอปและใช้ quit timeout",
-    "เปลี่ยน download pipeline ให้คำนวณ progress/checksum ผ่าน Transform stream เดียวกับ byte ที่เขียนลงไฟล์จริง",
-    "ตรวจ checksum จากไฟล์ installer บนดิสก์ซ้ำทั้งก่อนเข้าสถานะ downloaded และก่อนเปิด installer",
-    "แสดง error กลับไปที่ Software Update modal หากเปิด installer ไม่สำเร็จ แทนการค้างที่ Installing",
-    "อัปเดต checksum และขนาดไฟล์จาก installer ที่ build ใหม่สำหรับเวอร์ชัน 2.2.2"
+    "Fixed Software Update installer integrity verification and corrupted-cache recovery.",
+    "Added guarded install launch states so the app only exits after the installer starts.",
+    "Added closeable update modal recovery actions and artifact verification workflow."
   ],
   "mandatory": false,
   "minimumSupportedVersion": "1.0.0",
   "platforms": {
     "win32-x64": {
       "fileId": "1Y_U-21j3MHRNL2UANiiBCJ2O4h3LCDJU",
-      "fileName": "GitToto-Desktop-Setup-2.2.2.exe",
-      "size": 90527811,
-      "sha256": "5ec5a21409ebd4365ccfcdf89d8cf20c472ebb88259a666c6663268c023e1b6d",
-      "sha512": "eb9680de7ce72eed5955cc15fc9f0c930f0a31331dbf3dafeadd64d33f1420b39a844fc8edf5978c30950faf84db54d94746c03a1409014197d12fae679d9c48",
-      "downloadUrl": "https://raw.githubusercontent.com/sittichainacc/git_toto_desktop/main/GitToto-Desktop-Setup-2.2.2.exe"
+      "fileName": "GitToto-Desktop-Setup-2.2.3.exe",
+      "size": 90530399,
+      "sha256": "8bac6e6f7ae5f67dc0c2ed9789f635f9db617cbea1bb11d18eb14b7e21213cb8",
+      "sha512": "67a1d3a10c68a7bc435ce0eea843d825fbaa75f80fa89899b6eb0fb4de8d083a5415472ab2eced55a2138759fe35322d062a10a5ae8dcc4f59407e612b96cf60",
+      "downloadUrl": "https://raw.githubusercontent.com/sittichainacc/git_toto_desktop/main/GitToto-Desktop-Setup-2.2.3.exe"
     }
   }
 }
