@@ -1,23 +1,23 @@
 {
   "schemaVersion": 1,
   "channel": "stable",
-  "version": "2.2.3",
-  "releaseDate": "2026-07-26T01:43:02.075Z",
+  "version": "2.2.4",
+  "releaseDate": "2026-07-26T06:35:43.261Z",
   "releaseNotes": [
-    "Fixed Software Update installer integrity verification and corrupted-cache recovery.",
-    "Added guarded install launch states so the app only exits after the installer starts.",
-    "Added closeable update modal recovery actions and artifact verification workflow."
+    "Moved Software Update into the main Help menu in both native and desktop menus.",
+    "Removed the duplicate File menu update entry and legacy command alias.",
+    "Updated menu documentation to keep Software Update under Help only."
   ],
   "mandatory": false,
   "minimumSupportedVersion": "1.0.0",
   "platforms": {
     "win32-x64": {
       "fileId": "1Y_U-21j3MHRNL2UANiiBCJ2O4h3LCDJU",
-      "fileName": "GitToto-Desktop-Setup-2.2.3.exe",
-      "size": 90530399,
-      "sha256": "8bac6e6f7ae5f67dc0c2ed9789f635f9db617cbea1bb11d18eb14b7e21213cb8",
-      "sha512": "67a1d3a10c68a7bc435ce0eea843d825fbaa75f80fa89899b6eb0fb4de8d083a5415472ab2eced55a2138759fe35322d062a10a5ae8dcc4f59407e612b96cf60",
-      "downloadUrl": "https://raw.githubusercontent.com/sittichainacc/git_toto_desktop/main/GitToto-Desktop-Setup-2.2.3.exe"
+      "fileName": "GitToto-Desktop-Setup-2.2.4.exe",
+      "size": 90532993,
+      "sha256": "ae6a1cd1357c4d2790fae866a1c1acb6f2a749cb66d464c2627e452ff9b2a28c",
+      "sha512": "006f6b0fd36e2d209a130e3b02e0b0eedc3c24f60bed17825a558d4b6c3a393aea380535a0b7656323d1ffdc815aeba41cb641c3477971879cb52291e3053861",
+      "downloadUrl": "https://raw.githubusercontent.com/sittichainacc/git_toto_desktop/main/GitToto-Desktop-Setup-2.2.4.exe"
     }
   }
 }
