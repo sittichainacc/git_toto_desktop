@@ -1,23 +1,24 @@
 {
   "schemaVersion": 1,
   "channel": "stable",
-  "version": "2.2.4",
-  "releaseDate": "2026-07-26T06:35:43.261Z",
+  "version": "2.2.6",
+  "releaseDate": "2026-07-26T09:16:33.638Z",
   "releaseNotes": [
-    "Moved Software Update into the main Help menu in both native and desktop menus.",
-    "Removed the duplicate File menu update entry and legacy command alias.",
-    "Updated menu documentation to keep Software Update under Help only."
+    "Improved Commit Detail Panel loading so rapid commit selection never shows stale file lists.",
+    "Added request IDs, in-flight request deduplication, and bounded LRU caches for commit files, diffs, and historical file content.",
+    "Virtualized large commit file lists and added lightweight development diagnostics for commit selection performance.",
+    "Kept Commit Graph topology independent from selection while preserving selected commit and scroll state."
   ],
   "mandatory": false,
   "minimumSupportedVersion": "1.0.0",
   "platforms": {
     "win32-x64": {
       "fileId": "1Y_U-21j3MHRNL2UANiiBCJ2O4h3LCDJU",
-      "fileName": "GitToto-Desktop-Setup-2.2.4.exe",
-      "size": 90532993,
-      "sha256": "ae6a1cd1357c4d2790fae866a1c1acb6f2a749cb66d464c2627e452ff9b2a28c",
-      "sha512": "006f6b0fd36e2d209a130e3b02e0b0eedc3c24f60bed17825a558d4b6c3a393aea380535a0b7656323d1ffdc815aeba41cb641c3477971879cb52291e3053861",
-      "downloadUrl": "https://raw.githubusercontent.com/sittichainacc/git_toto_desktop/main/GitToto-Desktop-Setup-2.2.4.exe"
+      "fileName": "GitToto-Desktop-Setup-2.2.6.exe",
+      "size": 90538600,
+      "sha256": "2efa2cdb131ef521569a4d66e98020e3f03be9e4ca59a0fae3739b7107e9e2cf",
+      "sha512": "c78b509c3d9d586afa2d0fd98bdce65d3b9d46b2da1ccc86cf49d9fff1b00a7bf974caaaaea5fedc07f8ec31d4a46b7ce0fb88f67db7d6bcfb1a6709af6ba55a",
+      "downloadUrl": "https://raw.githubusercontent.com/sittichainacc/git_toto_desktop/main/GitToto-Desktop-Setup-2.2.6.exe"
     }
   }
 }
