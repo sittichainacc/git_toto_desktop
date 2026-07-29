@@ -1,24 +1,24 @@
 {
   "schemaVersion": 1,
   "channel": "stable",
-  "version": "2.2.8",
-  "releaseDate": "2026-07-29T12:31:08.520Z",
+  "version": "3.0.0",
+  "releaseDate": "2026-07-29T16:20:29.080Z",
   "releaseNotes": [
-    "Integrated GitToto Recovery Library Part 40 directly into GitToto Desktop source code.",
-    "Added secure main/preload Recovery IPC with raw command, cwd, env and executable fields rejected from renderer payloads.",
-    "Added GitToto Recovery modal for Pull/Push failure analysis with process events, confirmation handling and cancellation support.",
-    "Added internal recovery tests and verified build/test independence after hiding the external recovery library folder."
+    "Improved Commit Graph readability with P/R node labels and real H/B/T reference badges tied to actual commits.",
+    "Bound HEAD and current branch data directly from repository snapshots to avoid guessed graph labels.",
+    "Added graph layout validation for dangling segments, lane continuity, missing parent edges and unloaded-parent continuation markers.",
+    "Optimized Commit Graph validation for large histories and updated graph column sizing so reference badges do not overlap or get clipped."
   ],
   "mandatory": false,
   "minimumSupportedVersion": "1.0.0",
   "platforms": {
     "win32-x64": {
       "fileId": "1Y_U-21j3MHRNL2UANiiBCJ2O4h3LCDJU",
-      "fileName": "GitToto-Desktop-Setup-2.2.8.exe",
-      "size": 90601508,
-      "sha256": "8a4b3176c4b5c9edac960ebb3180b7354451f1c0bd0318b912050836a43dd495",
-      "sha512": "3e29d9a4ed5a70fc13f817b1a8c662fd978826fb6f91687864f33a8bccf2b55e5e0734791b9b8cfb81f0abe73af7ccc39a33b2f280ce162c0394d6b3ccad1099",
-      "downloadUrl": "https://raw.githubusercontent.com/sittichainacc/git_toto_desktop/main/GitToto-Desktop-Setup-2.2.8.exe"
+      "fileName": "GitToto-Desktop-Setup-3.0.0.exe",
+      "size": 90593799,
+      "sha256": "119d08208df48712fd5e1017aaca4544de6988afa2ad352ae9627545d98b0013",
+      "sha512": "5b48404fe66c649feb8942f5a29ce030a185b1be272b188e0f3bfa8faac9a283b6f6e01fa78b052b408fc554a62990b5c7ed52cd6698503c5b51d71f6b9e5ad2",
+      "downloadUrl": "https://raw.githubusercontent.com/sittichainacc/git_toto_desktop/main/GitToto-Desktop-Setup-3.0.0.exe"
     }
   }
 }
