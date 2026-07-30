@@ -1,26 +1,29 @@
 {
   "schemaVersion": 1,
   "channel": "stable",
-  "version": "4.0.0",
-  "releaseDate": "2026-07-30T12:39:06.064Z",
+  "version": "4.1.0",
+  "releaseDate": "2026-07-30T20:45:38.404Z",
   "releaseNotes": [
-    "Fixed a horizontal scrollbar duplication bug under the Commit Graph — a stray CSS overflow rule made the commit list a second scroll owner alongside the graph panel, so only one scrollbar shows now.",
+    "GitToto Recovery: Pull and Push now show a real, step-by-step progress modal — real repository info, a live percentage driven by actual git progress output, and a 9-step process list — instead of a generic spinner.",
+    "Redesigned Pull/Push recovery decisions (Merge vs Rebase, Stash vs Commit-first, choosing a matching Upstream branch) as Decision Cards showing risk level, a stated reason when a strategy is recommended, and real consequences. Selecting a strategy now only selects it — a separate confirm step is required before anything runs.",
+    "Replaced the last remaining native confirmation popups (discarding an unsaved file edit, force-deleting a branch, undoing a commit) with the app's own themed confirmation dialog.",
+    "Fixed the GitToto Recovery modal sometimes showing every step as still pending even though the Pull/Push had already finished — fast early steps could complete before the modal had fully opened and their progress was lost.",
+    "Fixed the Recovery modal's \"View recovery guidance\" button doing nothing on a failed Pull/Push — it now expands Technical Details to show the real failure reason.",
+    "Unified icon and status-color usage across the Recovery modal and toast notifications, and added a distinct Success toast color.",
     "GitToto Recovery: Pull/Push/Merge and other write operations are now scoped per repository instead of app-wide — you can run a Pull on one repository while a Push runs on another, including across linked worktrees. Closing a tab is still blocked only while that specific repository has an operation running.",
     "Fixed Pull incorrectly showing a \"diverged history\" dialog when local had commits simply ahead of the remote (nothing to actually merge).",
-    "Fixed a rare Pull-with-Auto-Stash race where a real stash re-apply conflict could be reported as a clean success.",
-    "Fixed switching repository tabs silently starting a new terminal shell for a repository you never opened a terminal in.",
-    "Terminal: resizing is now debounced for smoother drag performance, and Scrollback is now configurable in Settings → Terminal."
+    "Fixed a rare Pull-with-Auto-Stash race where a real stash re-apply conflict could be reported as a clean success."
   ],
   "mandatory": false,
   "minimumSupportedVersion": "1.0.0",
   "platforms": {
     "win32-x64": {
       "fileId": "1Y_U-21j3MHRNL2UANiiBCJ2O4h3LCDJU",
-      "fileName": "GitToto-Desktop-Setup-4.0.0.exe",
-      "size": 90612419,
-      "sha256": "e15a12cca80a832e5ec2be809a55e44f24bc284d060a80710aedfdaa99c4cb9f",
-      "sha512": "8c0ed20a5c554980feafceb87948af4df6c81cb08cb97db79fec780fa85537ff25e4a8973a4869a576992bf46162e864510f0a15c6cefbe7899f1b61c2bbde26",
-      "downloadUrl": "https://raw.githubusercontent.com/sittichainacc/git_toto_desktop/main/GitToto-Desktop-Setup-4.0.0.exe"
+      "fileName": "GitToto-Desktop-Setup-4.1.0.exe",
+      "size": 90623423,
+      "sha256": "93f17e444763e92d0388fe61905fe3b02ff7eaaa86706915c5a4256170476920",
+      "sha512": "a3250b514774b2218718a390bdcbc73576914537812938fb42897e07c0271beade69cf3770af28b8b7d5365bc273658f6108a939e8b90393e647d3f0549d3998",
+      "downloadUrl": "https://raw.githubusercontent.com/sittichainacc/git_toto_desktop/main/GitToto-Desktop-Setup-4.1.0.exe"
     }
   }
 }
