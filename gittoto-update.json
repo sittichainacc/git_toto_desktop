@@ -1,9 +1,15 @@
 {
   "schemaVersion": 1,
   "channel": "stable",
-  "version": "4.3.0",
-  "releaseDate": "2026-07-30T23:52:01.525Z",
+  "version": "4.4.0",
+  "releaseDate": "2026-07-31T06:03:48.793Z",
   "releaseNotes": [
+    "Performance: the Commit Graph no longer re-renders on unrelated app activity (toasts, zoom changes, background-tab loading) — it only updates when its own data actually changes, measurably reducing wasted rendering during normal use.",
+    "Security: the GitHub connection status check no longer passes your GitHub token into the app's UI process — it now only asks \"is a token saved?\" instead of handling the token value itself.",
+    "Terminal: closing a repository tab still keeps its terminal sessions running in the background (e.g. a dev server you started stays up) — now there's a visible indicator in the status bar showing how many background sessions exist, with a way to view and close them.",
+    "Terminal: the scrollback buffer kept for reattaching to a session now covers the full range you can configure in Preferences, instead of silently capping out earlier for very large configured scrollback.",
+    "Fixed a visual glitch where a commit graph row that scrolls into view could show its graph lines misaligned until an unrelated change refreshed it.",
+    "Fixed repository open being slower than necessary due to two independent git checks running one after another instead of at the same time.",
     "The GitToto Recovery modal now opens immediately when you click Pull or Push — it no longer waits for the first progress event or for the git command to finish, and the toolbar loading spinner appears in the same frame as the click.",
     "Fixed Pull/Push progress incorrectly showing 100% when the operation actually failed or was cancelled — progress now freezes at the last real value instead of jumping to complete.",
     "Fixed a failed Pull/Push showing every step as still \"pending\" instead of marking the step that actually failed — the real failing step is now shown as failed, completed steps stay completed, and steps that were skipped due to an early stop (no upstream, dirty working tree, diverged branches, unrelated histories, nothing to push) are now shown as skipped instead of stuck pending forever.",
@@ -21,11 +27,11 @@
   "platforms": {
     "win32-x64": {
       "fileId": "1Y_U-21j3MHRNL2UANiiBCJ2O4h3LCDJU",
-      "fileName": "GitToto-Desktop-Setup-4.3.0.exe",
-      "size": 90624920,
-      "sha256": "4a013227332d240bea38c732d0c91d2def60d5990e4577de3614a83bbfa976b6",
-      "sha512": "b23c3166ddef735b11a4e8ce45b9d2dabc6fd689bee73b61d012ff31581f9f086d59a78f70de8a1dd5d29449892d87e556e2249d3d09ae938771cb052e11250d",
-      "downloadUrl": "https://raw.githubusercontent.com/sittichainacc/git_toto_desktop/main/GitToto-Desktop-Setup-4.3.0.exe"
+      "fileName": "GitToto-Desktop-Setup-4.4.0.exe",
+      "size": 90627309,
+      "sha256": "9936d599f091ecfe2fe7799dd2ac0f17a0ea5aa5f58b07461cad6f11350d98f7",
+      "sha512": "a200bcde2490e66c4f1e7b97c4c101630168969efed3ccf545de30d3b99528d814825fd5fac31e6dbb489e85d56682139aefa12acfaa5603c26b5774fdae6884",
+      "downloadUrl": "https://raw.githubusercontent.com/sittichainacc/git_toto_desktop/main/GitToto-Desktop-Setup-4.4.0.exe"
     }
   }
 }
