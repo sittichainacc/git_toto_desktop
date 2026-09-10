@@ -1,9 +1,13 @@
 {
   "schemaVersion": 1,
   "channel": "stable",
-  "version": "4.4.0",
-  "releaseDate": "2026-07-31T06:03:48.793Z",
+  "version": "4.7.0",
+  "releaseDate": "2026-09-10T15:30:32.294Z",
   "releaseNotes": [
+    "New: an \"Auto Commit and Push\" button next to Stage Changes — stages everything, writes a Thai commit summary and description with a gitmoji automatically, creates the commit, then safely checks whether a pull is needed before pushing. A step-by-step progress modal shows each real stage as it happens and stays open until you close it.",
+    "Fixed a blank-screen state that could appear when reopening a repository tab (seen with WSL-hosted repositories) — the file watcher no longer reconnects forever on a broken watch, background refresh failures no longer clear the tab's last-known state, and a repository tab that still fails now shows a recoverable error screen instead of staying blank.",
+    "Redesigned the Commit Graph's branch-point markers — bigger, higher-contrast circles with the same gradient and glow styling as author avatars, and fixed commit letters on graph nodes not rendering visibly.",
+    "Performance: loading commit history for large repositories no longer re-walks the same range of commits multiple times while growing past the initial page size, and refreshing a repository whose branches/tags haven't actually moved now reuses the already-loaded history instead of re-reading it from git — refreshing an unchanged large repository is measurably faster.",
     "Performance: the Commit Graph no longer re-renders on unrelated app activity (toasts, zoom changes, background-tab loading) — it only updates when its own data actually changes, measurably reducing wasted rendering during normal use.",
     "Security: the GitHub connection status check no longer passes your GitHub token into the app's UI process — it now only asks \"is a token saved?\" instead of handling the token value itself.",
     "Terminal: closing a repository tab still keeps its terminal sessions running in the background (e.g. a dev server you started stays up) — now there's a visible indicator in the status bar showing how many background sessions exist, with a way to view and close them.",
@@ -27,11 +31,11 @@
   "platforms": {
     "win32-x64": {
       "fileId": "1Y_U-21j3MHRNL2UANiiBCJ2O4h3LCDJU",
-      "fileName": "GitToto-Desktop-Setup-4.4.0.exe",
-      "size": 90627309,
-      "sha256": "9936d599f091ecfe2fe7799dd2ac0f17a0ea5aa5f58b07461cad6f11350d98f7",
-      "sha512": "a200bcde2490e66c4f1e7b97c4c101630168969efed3ccf545de30d3b99528d814825fd5fac31e6dbb489e85d56682139aefa12acfaa5603c26b5774fdae6884",
-      "downloadUrl": "https://raw.githubusercontent.com/sittichainacc/git_toto_desktop/main/GitToto-Desktop-Setup-4.4.0.exe"
+      "fileName": "GitToto-Desktop-Setup-4.7.0.exe",
+      "size": 90634744,
+      "sha256": "2763c96171d7cb4a3e8bbeb7619c9350172234ff53b1b9665b344e9364e563fe",
+      "sha512": "8874c961809845e4709cca3dd72a5e5f03eb368bd72f5565a4728d54ab7dacb44ce0d0b5f946ccde43c18887c66ebddff25937bb5dda25194ab6a11820f404ad",
+      "downloadUrl": "https://raw.githubusercontent.com/sittichainacc/git_toto_desktop/main/GitToto-Desktop-Setup-4.7.0.exe"
     }
   }
 }
