@@ -1,43 +1,25 @@
 {
   "schemaVersion": 1,
   "channel": "stable",
-  "version": "4.8.0",
-  "releaseDate": "2026-09-14T00:00:00.000Z",
+  "version": "4.9.0",
+  "releaseDate": "2026-09-15T17:20:59.790Z",
   "releaseNotes": [
-    "Fixed \"Auto Commit and Push\" (and Push) failing outright when a still-held .git/index.lock was hit (e.g. another editor or terminal briefly touching the same repository) — a transient lock is now retried automatically for a few seconds before giving up, and a lock that genuinely persists now hands off to the GitToto Recovery engine instead of leaving you stuck on a raw error with only a Close button.",
-    "\"Auto Commit and Push\" now composes its commit message the same way as \"AI compose commit message with emoji\" when GitToto AI is configured — generated from the actual staged changes with a 2-gitmoji prefix — falling back to the existing deterministic Thai message whenever AI isn't configured or the request fails.",
-    "New: an \"Auto Commit and Push\" button next to Stage Changes — stages everything, writes a Thai commit summary and description with a gitmoji automatically, creates the commit, then safely checks whether a pull is needed before pushing. A step-by-step progress modal shows each real stage as it happens and stays open until you close it.",
-    "Fixed a blank-screen state that could appear when reopening a repository tab (seen with WSL-hosted repositories) — the file watcher no longer reconnects forever on a broken watch, background refresh failures no longer clear the tab's last-known state, and a repository tab that still fails now shows a recoverable error screen instead of staying blank.",
-    "Redesigned the Commit Graph's branch-point markers — bigger, higher-contrast circles with the same gradient and glow styling as author avatars, and fixed commit letters on graph nodes not rendering visibly.",
-    "Performance: loading commit history for large repositories no longer re-walks the same range of commits multiple times while growing past the initial page size, and refreshing a repository whose branches/tags haven't actually moved now reuses the already-loaded history instead of re-reading it from git — refreshing an unchanged large repository is measurably faster.",
-    "Performance: the Commit Graph no longer re-renders on unrelated app activity (toasts, zoom changes, background-tab loading) — it only updates when its own data actually changes, measurably reducing wasted rendering during normal use.",
-    "Security: the GitHub connection status check no longer passes your GitHub token into the app's UI process — it now only asks \"is a token saved?\" instead of handling the token value itself.",
-    "Terminal: closing a repository tab still keeps its terminal sessions running in the background (e.g. a dev server you started stays up) — now there's a visible indicator in the status bar showing how many background sessions exist, with a way to view and close them.",
-    "Terminal: the scrollback buffer kept for reattaching to a session now covers the full range you can configure in Preferences, instead of silently capping out earlier for very large configured scrollback.",
-    "Fixed a visual glitch where a commit graph row that scrolls into view could show its graph lines misaligned until an unrelated change refreshed it.",
-    "Fixed repository open being slower than necessary due to two independent git checks running one after another instead of at the same time.",
-    "The GitToto Recovery modal now opens immediately when you click Pull or Push — it no longer waits for the first progress event or for the git command to finish, and the toolbar loading spinner appears in the same frame as the click.",
-    "Fixed Pull/Push progress incorrectly showing 100% when the operation actually failed or was cancelled — progress now freezes at the last real value instead of jumping to complete.",
-    "Fixed a failed Pull/Push showing every step as still \"pending\" instead of marking the step that actually failed — the real failing step is now shown as failed, completed steps stay completed, and steps that were skipped due to an early stop (no upstream, dirty working tree, diverged branches, unrelated histories, nothing to push) are now shown as skipped instead of stuck pending forever.",
-    "GitToto Recovery: Pull and Push now show a real, step-by-step progress modal — real repository info, a live percentage driven by actual git progress output, and a 9-step process list — instead of a generic spinner.",
-    "Redesigned Pull/Push recovery decisions (Merge vs Rebase, Stash vs Commit-first, choosing a matching Upstream branch) as Decision Cards showing risk level, a stated reason when a strategy is recommended, and real consequences. Selecting a strategy now only selects it — a separate confirm step is required before anything runs.",
-    "Replaced the last remaining native confirmation popups (discarding an unsaved file edit, force-deleting a branch, undoing a commit) with the app's own themed confirmation dialog.",
-    "Fixed the Recovery modal's \"View recovery guidance\" button doing nothing on a failed Pull/Push — it now expands Technical Details to show the real failure reason.",
-    "Unified icon and status-color usage across the Recovery modal and toast notifications, and added a distinct Success toast color.",
-    "GitToto Recovery: Pull/Push/Merge and other write operations are now scoped per repository instead of app-wide — you can run a Pull on one repository while a Push runs on another, including across linked worktrees. Closing a tab is still blocked only while that specific repository has an operation running.",
-    "Fixed Pull incorrectly showing a \"diverged history\" dialog when local had commits simply ahead of the remote (nothing to actually merge).",
-    "Fixed a rare Pull-with-Auto-Stash race where a real stash re-apply conflict could be reported as a clean success."
+    "เพิ่มรายละเอียดโปรเจคเมื่อชี้เมาส์ที่แท็บ พร้อมสถานะ branch, path และข้อมูลสำคัญที่อ่านได้ทันที",
+    "เพิ่มปุ่มเปิดโปรเจคด้วย VS Code หรือ Antigravity IDE จาก project detail modal โดยตรวจหาโปรแกรมและแสดงผลลัพธ์ที่ผู้ใช้เข้าใจได้",
+    "ปรับปรุงการเปิดโปรเจคบน Windows ให้รองรับตำแหน่งติดตั้งมาตรฐานและป้องกัน environment ของ Electron รบกวนการเปิด IDE",
+    "ปรับปรุงการกู้คืนจาก repository state และ background refresh เพื่อไม่ให้แท็บค้างเป็นหน้าจอว่างเมื่อโหลดข้อมูลล้มเหลว",
+    "เพิ่มการตรวจสอบความสอดคล้องของ package version กับ Software Update manifest เพื่อป้องกันการเผยแพร่ไฟล์คนละเวอร์ชัน"
   ],
   "mandatory": false,
   "minimumSupportedVersion": "1.0.0",
   "platforms": {
     "win32-x64": {
       "fileId": "1Y_U-21j3MHRNL2UANiiBCJ2O4h3LCDJU",
-      "fileName": "GitToto-Desktop-Setup-4.8.0.exe",
-      "size": 90637095,
-      "sha256": "9cd2ba7df759daad6dd6c69b7b72bd132db83f1c80ab405a2abed74f7b89f19f",
-      "sha512": "94396d25fb228b461b938e2bc30dbfac2c87d09937754752a8a14235697ac62657698cfa6be9b4bc32d7ee9021f38d8383fe148379cc8a25c84f4c4ecb36c539",
-      "downloadUrl": "https://raw.githubusercontent.com/sittichainacc/git_toto_desktop/main/GitToto-Desktop-Setup-4.8.0.exe"
+      "fileName": "GitToto-Desktop-Setup-4.9.0.exe",
+      "size": 90637254,
+      "sha256": "6689385202c3569485fd741767f85bf5a7d4e45ead8113ac1be8da1ec64c9437",
+      "sha512": "1e6f7aaf56bedfc39fb47b4c45496037eaae176ab00331843af07a60e93828e455aaf3d72c2ee650b3a78bcca1547f59456c02b5f836a18b3a64e68d455778b3",
+      "downloadUrl": "https://raw.githubusercontent.com/sittichainacc/git_toto_desktop/main/GitToto-Desktop-Setup-4.9.0.exe"
     }
   }
 }
