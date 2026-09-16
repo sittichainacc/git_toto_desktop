@@ -1,25 +1,24 @@
 {
   "schemaVersion": 1,
   "channel": "stable",
-  "version": "4.10.0",
-  "releaseDate": "2026-09-16T09:48:03.211Z",
+  "version": "5.0.0",
+  "releaseDate": "2026-09-16T16:59:21.493Z",
   "releaseNotes": [
-    "แก้ปัญหาหน้าจอไม่อัปเดตหลัง Commit และ Auto Commit โดยตรวจสอบ snapshot/HEAD จริงก่อนถือว่างานเสร็จ",
-    "เพิ่มระบบ retry การ refresh แบบมีขอบเขต และอัปเดตสถานะหลังทั้งผลสำเร็จและล้มเหลว รวมถึงกรณี Git hook เปลี่ยน index บางส่วน",
-    "เพิ่มขั้นอัปเดตกราฟและรายการไฟล์ใน Auto Commit modal พร้อมป้องกันการปิดหรือ Commit ซ้ำก่อนหน้าจอซิงก์เสร็จ",
-    "เพิ่มปุ่มลองอัปเดตหน้าจออีกครั้งเมื่อ Commit สำเร็จแต่ UI sync ล้มเหลว",
-    "เพิ่มทางเลือก Recovery สำหรับ diverged/unrelated histories โดยไม่ merge, rebase หรือ force push อัตโนมัติ"
+    "ยกระดับ GitToto Desktop เป็นเวอร์ชัน 5.0.0 พร้อมปรับปรุงความเร็วและความเสถียรของการซิงก์สถานะหลัง Commit",
+    "ลดเวลาการอัปเดตกราฟและรายการไฟล์ในโปรเจกต์ WSL ขนาดใหญ่ด้วยการโหลดข้อมูล Stash แบบกลุ่ม",
+    "แสดงกราฟและไฟล์ tracked ที่เป็นปัจจุบันทันที แล้วตรวจไฟล์ใหม่ต่อเบื้องหลังโดยไม่ทำให้หน้าจอค้าง",
+    "ป้องกัน watcher และผล refresh เก่าทับสถานะล่าสุด รวมถึงยกเลิกคำสั่งอ่านที่ค้างก่อนเริ่ม Commit"
   ],
   "mandatory": false,
   "minimumSupportedVersion": "1.0.0",
   "platforms": {
     "win32-x64": {
       "fileId": "1Y_U-21j3MHRNL2UANiiBCJ2O4h3LCDJU",
-      "fileName": "GitToto-Desktop-Setup-4.10.0.exe",
-      "size": 90639477,
-      "sha256": "46e05928a76787b244c9c4f4af02d7ec0929a3467cf0881d6777ff6a154f9714",
-      "sha512": "5dbcc8900e180ea5b8a3ca4c8f9217776762e31bb6c091ab591e23840a0fe132a9dd6021f2792d5d655f0004a9b722d2c6befb9c0f6b7213a795ed2e98e0b28a",
-      "downloadUrl": "https://raw.githubusercontent.com/sittichainacc/git_toto_desktop/main/GitToto-Desktop-Setup-4.10.0.exe"
+      "fileName": "GitToto-Desktop-Setup-5.0.0.exe",
+      "size": 90639794,
+      "sha256": "da60f1bac2cb5a96d0c7e4d193ed21b36ef4cc65f5aa838f9a1cafbeae14f687",
+      "sha512": "40e38308dffb6205d210a8289f66e614106492cfca3ed5994462cb77d9e13665dfe31cf81925ab8a673bd1c6b8d04258f5939ccc51366e63abe104951245f4cd",
+      "downloadUrl": "https://raw.githubusercontent.com/sittichainacc/git_toto_desktop/main/GitToto-Desktop-Setup-5.0.0.exe"
     }
   }
 }
