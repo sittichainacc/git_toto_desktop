@@ -1,25 +1,25 @@
 {
   "schemaVersion": 1,
   "channel": "stable",
-  "version": "4.9.0",
-  "releaseDate": "2026-09-15T17:20:59.790Z",
+  "version": "4.10.0",
+  "releaseDate": "2026-09-16T09:48:03.211Z",
   "releaseNotes": [
-    "เพิ่มรายละเอียดโปรเจคเมื่อชี้เมาส์ที่แท็บ พร้อมสถานะ branch, path และข้อมูลสำคัญที่อ่านได้ทันที",
-    "เพิ่มปุ่มเปิดโปรเจคด้วย VS Code หรือ Antigravity IDE จาก project detail modal โดยตรวจหาโปรแกรมและแสดงผลลัพธ์ที่ผู้ใช้เข้าใจได้",
-    "ปรับปรุงการเปิดโปรเจคบน Windows ให้รองรับตำแหน่งติดตั้งมาตรฐานและป้องกัน environment ของ Electron รบกวนการเปิด IDE",
-    "ปรับปรุงการกู้คืนจาก repository state และ background refresh เพื่อไม่ให้แท็บค้างเป็นหน้าจอว่างเมื่อโหลดข้อมูลล้มเหลว",
-    "เพิ่มการตรวจสอบความสอดคล้องของ package version กับ Software Update manifest เพื่อป้องกันการเผยแพร่ไฟล์คนละเวอร์ชัน"
+    "แก้ปัญหาหน้าจอไม่อัปเดตหลัง Commit และ Auto Commit โดยตรวจสอบ snapshot/HEAD จริงก่อนถือว่างานเสร็จ",
+    "เพิ่มระบบ retry การ refresh แบบมีขอบเขต และอัปเดตสถานะหลังทั้งผลสำเร็จและล้มเหลว รวมถึงกรณี Git hook เปลี่ยน index บางส่วน",
+    "เพิ่มขั้นอัปเดตกราฟและรายการไฟล์ใน Auto Commit modal พร้อมป้องกันการปิดหรือ Commit ซ้ำก่อนหน้าจอซิงก์เสร็จ",
+    "เพิ่มปุ่มลองอัปเดตหน้าจออีกครั้งเมื่อ Commit สำเร็จแต่ UI sync ล้มเหลว",
+    "เพิ่มทางเลือก Recovery สำหรับ diverged/unrelated histories โดยไม่ merge, rebase หรือ force push อัตโนมัติ"
   ],
   "mandatory": false,
   "minimumSupportedVersion": "1.0.0",
   "platforms": {
     "win32-x64": {
       "fileId": "1Y_U-21j3MHRNL2UANiiBCJ2O4h3LCDJU",
-      "fileName": "GitToto-Desktop-Setup-4.9.0.exe",
-      "size": 90637254,
-      "sha256": "6689385202c3569485fd741767f85bf5a7d4e45ead8113ac1be8da1ec64c9437",
-      "sha512": "1e6f7aaf56bedfc39fb47b4c45496037eaae176ab00331843af07a60e93828e455aaf3d72c2ee650b3a78bcca1547f59456c02b5f836a18b3a64e68d455778b3",
-      "downloadUrl": "https://raw.githubusercontent.com/sittichainacc/git_toto_desktop/main/GitToto-Desktop-Setup-4.9.0.exe"
+      "fileName": "GitToto-Desktop-Setup-4.10.0.exe",
+      "size": 90639477,
+      "sha256": "46e05928a76787b244c9c4f4af02d7ec0929a3467cf0881d6777ff6a154f9714",
+      "sha512": "5dbcc8900e180ea5b8a3ca4c8f9217776762e31bb6c091ab591e23840a0fe132a9dd6021f2792d5d655f0004a9b722d2c6befb9c0f6b7213a795ed2e98e0b28a",
+      "downloadUrl": "https://raw.githubusercontent.com/sittichainacc/git_toto_desktop/main/GitToto-Desktop-Setup-4.10.0.exe"
     }
   }
 }
